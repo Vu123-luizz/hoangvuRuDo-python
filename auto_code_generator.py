@@ -64,11 +64,33 @@ for bai_so, noi_dung in bai_list:
 
     print(f"Đã tạo {filename}")
 
-# ===== 5. PUSH GITHUB =====
+# ===== AUTO GIT (FIX CHUẨN) =====
+def run_git(cmd):
+    return subprocess.run(cmd, capture_output=True, text=True)
+
 try:
+    print("🔄 Kiểm tra thay đổi...")
+
     subprocess.run(["git", "add", "."], check=True)
-    subprocess.run(["git", "commit", "-m", "Auto add Bai tap"], check=True)
+
+    status = run_git(["git", "status", "--porcelain"])
+
+    if status.stdout.strip() == "":
+        print("✅ Không có thay đổi → không cần commit")
+    else:
+        print("📦 Có thay đổi → đang commit...")
+        subprocess.run(["git", "commit", "-m", "Auto update code"], check=True)
+
+    print("⬇️ Đang pull từ GitHub...")
+    subprocess.run(["git", "pull", "--rebase"], check=True)
+
+    print("⬆️ Đang push lên GitHub...")
     subprocess.run(["git", "push"], check=True)
-    print("Đã push lên GitHub 🚀")
-except:
-    print("Chưa kết nối git hoặc có lỗi khi push")
+
+    print("🚀 Hoàn tất!")
+
+except subprocess.CalledProcessError as e:
+    print("❌ Lỗi Git:", e)
+
+except Exception as e:
+    print("❌ Lỗi hệ thống:", e)
