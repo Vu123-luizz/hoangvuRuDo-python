@@ -72,3 +72,5 @@ try:
     print("Đã push lên GitHub 🚀")
 except:
     print("Chưa kết nối git hoặc có lỗi khi push")
+
+#--python auto_code_generator.py
