@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>497</width>
+    <height>645</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QLabel#title {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    QLabel#subtitle {
+        color: gray;
+        font-size: 11px;
+    }
+    QLineEdit {
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    QPushButton {
+        background-color: #000;
+        color: white;
+        padding: 8px;
+        font-weight: bold;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout">
+   <item alignment="Qt::AlignLeft">
+    <widget class="QLabel" name="title">
+     <property name="text">
+      <string>Đăng ký</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignLeft">
+    <widget class="QLabel" name="subtitle">
+     <property name="text">
+      <string>Nhanh chóng và dễ dàng</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <widget class="QLineEdit" name="txtHo">
+       <property name="placeholderText">
+        <string>Họ</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txtTen">
+       <property name="placeholderText">
+        <string>Tên</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="txtContact">
+     <property name="placeholderText">
+      <string>Số di động hoặc email</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="txtPassword">
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Mật khẩu mới</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string>font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Ngày sinh</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <widget class="QComboBox" name="cbDay"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cbMonth"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cbYear"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string>font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Giới tính</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <widget class="QRadioButton" name="rbNam">
+       <property name="text">
+        <string>Nam</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="rbNu">
+       <property name="text">
+        <string>Nữ</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string>font-size:10px; color:gray;</string>
+     </property>
+     <property name="text">
+      <string>Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản, Chính sách dữ liệu và cookie.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="chkAgree">
+     <property name="text">
+      <string>Tôi đồng ý với các điều khoản trên</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnRegister">
+     <property name="text">
+      <string>Đăng ký</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
